@@ -26,7 +26,7 @@ export const App = () => {
       alert(`${newContact.name} is already in contacts`);
       return;
     }
-    setContacts([...contacts, newContact]);
+    setContacts(prevContacts => [...prevContacts, newContact]);
   };
 
   const isContactNew = (contacts, newContact) => {
